@@ -1,5 +1,8 @@
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingOak, function (sprite, location) {
-	
+    tiles.setCurrentTilemap(tilemap`level4`)
+    tiles.placeOnRandomTile(mySprite, assets.tile`transparency16`)
+    scene.cameraFollowSprite(mySprite)
+    info.startCountdown(20)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`level2`)
